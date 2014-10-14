@@ -1,0 +1,12 @@
+go into the codes
+play with the numbers and map the variables
+
+hinge joint: one dimentional joint
+
+high level view of SIMBICON:
+Finite state machine
+which foot is on the ground
+
+detect the contact
+
+implement a basic state machine

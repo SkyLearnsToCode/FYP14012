@@ -1,0 +1,25 @@
+CC=gcc
+CFLAGS=-c -Wall -O2 -I$(HOME)/include  
+LDFLAGS= 
+LIBS= -L/usr/lib -lGLU \
+	-L/usr/X11R6/lib -lX11 -lXext -lm \
+	-L$(HOME)/lib -lode -lgsl -lgslcblas 
+			
+SOURCES= renderer.cpp simulator.cpp toybody.cpp toycontrol.cpp main.cpp drawstuff.cpp x11.cpp 
+
+OBJECTS=$(SOURCES:.cpp=.o)
+EXECUTABLE=a3
+
+
+all: $(SOURCES) $(EXECUTABLE)
+	
+$(EXECUTABLE): $(OBJECTS)
+	$(CC) $(LDFLAGS) $(OBJECTS) -o $@ $(LIBS) 
+
+.cpp.o:
+	$(CC) $(CFLAGS) $< -o $@
+
+clean: 
+	-rm *.o
+	-rm $(EXECUTABLE) 
+

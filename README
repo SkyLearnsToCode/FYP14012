@@ -1,0 +1,6 @@
+Implementing SIMBICON should require modifying toycontrol.{h,cpp}, which 
+contains the control algorithm for the model defined in toybody.{h,cpp}.  
+
+The sample code defines a PD servo at every joint of toybody, where _ks[i] 
+and _kd[i] are the spring and damping constants, _target[i] are the target 
+angles.     
