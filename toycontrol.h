@@ -13,9 +13,6 @@ class ToyControl : public Controller {
 	double _ks[NUM_BODY-1]; 
 	double _kd[NUM_BODY-1]; 
 	double _target[NUM_BODY-1];
-
-private:
-	void setTarget(double *t,int size);	
 	
 public: 
 	ToyControl( ToyBody& toy );  
